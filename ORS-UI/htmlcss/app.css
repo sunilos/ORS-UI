@@ -1,0 +1,16 @@
+H1{
+    color: blue;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.error{
+    color: red;
+    font-size: 30px;
+}
+
+.label{
+    color: blue;
+    font-weight: bold;
+    font-size: 14px;
+}
