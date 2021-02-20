@@ -1,85 +1,127 @@
+/*Body default property*/
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
 
 H1 {
-  color: darkblue;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-font {
-  font-weight: bold;
-  color: red;
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-
+TH {
+    font-weight: bold;
+    color: grey;
+    background: moccasin;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-label {
-  font-weight: bold;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+TD {
+    color: grey;
+    font-weight: normal;
 }
+
+
+/* Form Label */
+
+.label {
+    font-weight: bold;
+    color: grey;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Error message */
+
+.error {
+    font-weight: normal;
+    font-size: 12px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.errorbig {
+    font-weight: normal;
+    font-size: 16px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Success message */
+
+.success {
+    font-weight: bold;
+    font-size: 16px;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*Menu bar*/
 
 .dropbtn {
-  /* background-color: black; */
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+    /* background-color: black; */
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: white
+    background-color: white
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
-
 input {
-  padding: 5px;
-  border-radius: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: grey;
 }
 
 select {
-  padding: 5px;
-  border-radius: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: grey;
 }
 
 input[type=button],
 input[type=reset],
 input[type=submit] {
-  background-color: dodgerblue;
-  border: none;
-  color: white;
-  padding: 8px 20px;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 15px;
-
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
 }

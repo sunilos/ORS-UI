@@ -1,12 +1,11 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="app.css">
+    </link>
 </head>
-<link rel="stylesheet" href="app.css">
-</link>
 
 <body>
-
     <table width="100%" border="0">
         <tr>
             <td width="90%"><a href="welcome.html">Welcome</b></a> |
@@ -21,7 +20,7 @@
         <tr>
             <td>
                 <h3>
-                    Hi, admin (Admin)</h3>
+                    Hi, Admin (Admin)</h3>
             </td>
         </tr>
         <tr>
@@ -31,7 +30,7 @@
                     <div class="dropdown-content">
                         <a href="GetMarksheet.html">Get Marksheet</b></a>
                         <a href="MarksheetMeritList.html">Marksheet MeritList</b>
-                        <a href="Marksheet.html">Add Marksheet</b></a>
+                            <a href="Marksheet.html">Add Marksheet</b></a>
                         <a href="MarksheetList.html">Marksheet List</b></a>
                     </div>
                 </div>
@@ -39,7 +38,7 @@
                     <button class="dropbtn">User</button>
                     <div class="dropdown-content">
                         <a href="NotFound.html">Add User</b></a>
-                        <a href="NotFound.html">User List</b></a>            
+                        <a href="NotFound.html">User List</b></a>
                     </div>
                 </div>
 
@@ -68,37 +67,35 @@
                 <div class="dropdown">
                     <button class="dropbtn">About us</button>
                     <div class="dropdown-content">
-                        <a href="MyProfile.html">MyProfile</b></a> 
-                        <a href="ChangePassword.html">Change Password</b></a> 
+                        <a href="MyProfile.html">MyProfile</b></a>
+                        <a href="ChangePassword.html">Change Password</b></a>
                         <a href="NotFound.html">Java Doc</b></a>
                     </div>
                 </div>
             </td>
-
         </tr>
-    </table>  <hr>
-    
+    </table>
+    <hr>
     <center>
         <h1>Get Marksheet</h1>
-
-        <font color="red">
-        </font>
-
-        <H2>
-            <font color="green">
-            </font>
-        </H2>
-
+        <h2 class="errorbig">Role number does not found </h2>
         <form action="/ORSProject4/ctl/GetMarksheetCtl">
-
             <input type="hidden" name="id" value="0">
             <table>
-                <label>RollNo :</label>&emsp;
-                <input type="text" name="rollNo" value="">&emsp;
-                <input type="submit" name="operation" value="Go">
-                <br>
-                <font color="red">Roll Number is required</font>
-
+                <tr>
+                    <td>
+                        <label class="label">Roll No:</label>&emsp;
+                    </td>
+                    <td>
+                        <input type="text" name="rollNo" value="">&emsp;
+                        <font class="error">Role Number is required</font>
+                    </td>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <input type="submit" name="operation" value="Go">
+                        </td>
+                    </tr>
+            </table>
 
         </form>
     </center>
