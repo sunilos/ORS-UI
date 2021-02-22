@@ -2,16 +2,13 @@
 
 <head>
     <link rel="stylesheet" href="app.css">
-</link>
-
+    </link>
 </head>
 
 <body>
     <table width="100%" border="0">
         <tr>
             <td width="90%">
-                <a href="welcome.html">Welcome</b></a> |
-                <a href="index.html">Login</b></a>
             </td>
             <td rowspan="2">
                 <h1 align="Right">
@@ -28,11 +25,11 @@
     </table>
     <hr>
     <center>
-        <form action="LoginCtl">
+        <form action="welcome.html">
             <h1>Login</h1>
             <H2>
-                <font color="red">Invalid Id and Password
-                </font>
+                <p class="errorbig">Invalid Id and Password
+                </p>
             </H2>
 
             <input type="hidden" name="id" value="0">
@@ -42,26 +39,23 @@
             <input type="hidden" name="modifiedDatetime" value="0">
             <table>
                 <tr>
-                    <th>LoginId*</th>
+                    <td>LoginId <span class="errorbig">*</span></td>
                     <td><input type="text" name="login" size=30 value="">
-                        <font color="red"> Login Id is required</font>
+                        <font class="error"> Login Id is required</font>
                     </td>
                 </tr>
                 <tr>
-                    <th>Password*</th>
+                    <td>Password <span class="errorbig">*</span></td>
                     <td><input type="password" name="password" size=30 value="">
-                        <font color="red"> Password is required</font>
+                        <font class="error"> Password is required</font>
                     </td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <td colspan="2"><input type="submit" name="operation" value="SignIn"> &nbsp;
-
+                    <td colspan="2" align="right"><input type="submit" name="operation" value="SignIn"> &nbsp;
                     </td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <td><a href="Signup.html"><b>Sign Up</b></a> | <a href="ForgotPassword.html"><b>Forget
+                    <td colspan="2" align="center"><a href="Signup.html"><b>Sign Up</b></a> | <a href="ForgotPassword.html"><b>Forget
                                 my password</b></a>&nbsp;</td>
                 </tr>
             </table>
