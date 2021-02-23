@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="app.css">
+    </link>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script>
+        function clearMessage(frm) {
+            resetInput(frm.login);
+            resetInput(frm.password);
+        }
+
+        function validate(frm) {
+            var flag = true;
+            clearMessage(frm);
+            if (isEmpty(frm.login.value)) {
+                errorInput(frm.login, "Login Id is required");
+                flag = false;
+            }
+            if (isEmpty(frm.password.value)) {
+                errorInput(frm.password, "Password is required");
+                flag = false;
+            }
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+    <table width="100%" border="0">
+        <tr>
+            <td width="90%">
+            </td>
+            <td rowspan="2">
+                <h1 align="Right">
+                    <img src="../img/logo.png" height="100">
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Hi, Guest</h3>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <center>
+        <form action="welcome.html" onsubmit="return validate(this)">
+            <h1>Login</h1>
+            <H2>
+                <p class="errorbig">Invalid Id and Password
+                </p>
+            </H2>
+
+            <input type="hidden" name="id" value="0">
+            <input type="hidden" name="createdBy" value="null">
+            <input type="hidden" name="modifiedBy" value="null">
+            <input type="hidden" name="createdDatetime" value="0">
+            <input type="hidden" name="modifiedDatetime" value="0">
+            <table>
+                <tr>
+                    <td>LoginId <span class="errorbig">*</span></td>
+                    <td><input type="text" name="login" size=30 value="">
+                        <font id="error.login" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password <span class="errorbig">*</span></td>
+                    <td><input type="password" name="password" size=30 value="">
+                        <font id="error.password" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right"><input type="submit" name="operation" value="SignIn"> &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><a href="Signup.html"><b>Sign Up</b></a> | <a href="ForgotPassword.html"><b>Forget
+                                my password</b></a>&nbsp;</td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <HR>
+    <CENTER>
+        <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
+    </CENTER>
+</body>
+
+</html>

@@ -7,11 +7,10 @@
 </head>
 
 <body>
-
-    <table widtd="100%" border="0">
+    <table width="100%" border="0">
         <tr>
-            <td widtd="90%"><a href="welcome.html">Welcome</b></a> |
-                <a href="index.html">Logout</b></a>
+            <td width="90%"><a href="welcome.html">Welcome</a> |
+                <a href="index.html">Logout</a>
             </td>
             <td rowspan="2">
                 <h1 align="Right">
@@ -22,7 +21,7 @@
         <tr>
             <td>
                 <h3>
-                    Hi, admin (Admin)</h3>
+                    Hi, Admin (Admin)</h3>
             </td>
         </tr>
         <tr>
@@ -79,79 +78,111 @@
         </tr>
     </table>
     <hr>
-    <form action="ChangePassword.html">
-
-        <center>
-            <h1>My Profile</h1>
-
-            <H2>
-                <font class="error">
-                </font>
-            </H2>
-
-            <input type="hidden" name="id" value="36">
-            <input type="hidden" name="createdBy" value="rahul.sahu@nenosystems.com">
-            <input type="hidden" name="modifiedBy" value="rahul.sahu@nenosystems.com">
-            <input type="hidden" name="createdDatetime" value="1411998250000">
-            <input type="hidden" name="modifiedDatetime" value="0">
-
-            <table>
+    <center>
+        <h1>Marksheet Merit List</h1>
+        <form action="">
+            <br>
+            <table border="1" cellspacing="0" width="90%">
                 <tr>
-                    <td>LoginId <span class="errorbig">*</span> </td>
-                    <td><input type="text" name="login" value="admin@gmail.com" readonly="readonly">
-                        <font class="error"> </font>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>First Name <span class="errorbig">*</span></td>
-                    <td><input type="text" name="firstName" value="">
-                        <font class="error"> First Name is required</font>
-                    </td>
+                    <th>ID</th>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Physics</th>
+                    <th>Chemistry</th>
+                    <th>Maths</th>
                 </tr>
                 <tr>
-                    <td>Last Name <span class="errorbig">*</span></td>
-                    <td><input type="text" name="lastName" value="">
-                        <font class="error"> Last Name is required</font>
-                    </td>
+                    <td>1</td>
+                    <td>B111</td>
+                    <td>Vipul Baser</td>
+                    <td>99</td>
+                    <td>100</td>
+                    <td>100</td>
                 </tr>
                 <tr>
-                    <td>Gender</td>
-                    <td>
-                        <select class='form-control' name='gender'>
-                            <option selected value='F'>Female</option>
-                            <option value='M'>Male</option>
-                        </select>
-                    </td>
+                    <td>2</td>
+                    <td>A111</td>
+                    <td>Ashutosh Upadhyay</td>
+                    <td>99</td>
+                    <td>100</td>
+                    <td>100</td>
                 </tr>
                 <tr>
-                    <td>Mobile No <span class="errorbig">*</span></td>
-                    <td><input type="text" name="mobileNo" value="">
-                        <font class="error"> MobileNo is required</font>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Date Of Birtd (mm/dd/yyyy)</td>
-                    <td>
-                        <input type="date" name="dob" id="dateofbirtd">
-                        <font class="error"> </font>
-                    </td>
+                    <td>3</td>
+                    <td>A1</td>
+                    <td>ABBY</td>
+                    <td>99</td>
+                    <td>99</td>
+                    <td>99</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td colspan="2">
-                        <input type="submit" name="operation" value="Save"> &nbsp;
-                        <input type="submit" name="operation" value="ChangePassword"> &nbsp;
-                    </td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>Rajesh Verma</td>
+                    <td>99</td>
+                    <td>77</td>
+                    <td>99</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>18</td>
+                    <td>mohan lal</td>
+                    <td>88</td>
+                    <td>89</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>Ashish Nehra</td>
+                    <td>88</td>
+                    <td>88</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>mohan lal</td>
+                    <td>77</td>
+                    <td>77</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>Manish Sharma</td>
+                    <td>66</td>
+                    <td>66</td>
+                    <td>66</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>21</td>
+                    <td>Manish Sharma</td>
+                    <td>58</td>
+                    <td>58</td>
+                    <td>59</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>Rajendra Manli</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
                 </tr>
             </table>
-    </form>
+            <table>
+                <tr>
+                    <td align="right"><input type="submit" name="operation" value="Back"></td>
+                </tr>
+            </table>
+            <input type="hidden" name="pageNo" value="1"> <input type="hidden" name="pageSize" value="10">
+        </form>
     </center>
     <HR>
     <CENTER>
         <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
-
     </CENTER>
 </body>
 

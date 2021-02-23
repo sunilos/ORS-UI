@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="app.css">
+    </link>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script>
+        function clearMessage(frm) {
+            resetInput(frm.login);
+            resetInput(frm.password);
+            resetInput(frm.confirmPassword);
+            resetInput(frm.firstName);
+            resetInput(frm.lastName);
+            resetInput(frm.dob);
+        }
+
+        function validate(frm) {
+            var flag = true;
+            clearMessage(frm);
+            if (isEmpty(frm.login.value)) {
+                errorInput(frm.login, "Login Id is required");
+                flag = false;
+            }
+            if (isEmpty(frm.password.value)) {
+                errorInput(frm.password, "Password is required");
+                flag = false;
+            }
+            if (isEmpty(frm.confirmPassword.value)) {
+                errorInput(frm.confirmPassword, "Confirm Password is required");
+                flag = false;
+            }
+            if (isEmpty(frm.firstName.value)) {
+                errorInput(frm.firstName, "Firs tName is required");
+                flag = false;
+            }
+            if (isEmpty(frm.lastName.value)) {
+                errorInput(frm.lastName, "Last Name  is required");
+                flag = false;
+            }
+            if (isEmpty(frm.dob.value)) {
+                errorInput(frm.dob, "Date of Birth is required");
+                flag = false;
+            }
+            if (frm.password.value.localeCompare(frm.confirmPassword.value) != 0) {
+                errorInput(frm.confirmPassword, "Password and conform-password are different");
+                flag = false;
+            }
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+    <table width="100%" border="0">
+        <tr>
+            <td width="90%">
+            </td>
+            <td rowspan="2">
+                <h1 align="Right">
+                    <img src="../img/logo.png" height="100">
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Hi, Guest</h3>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <form action="index.html" onsubmit="return validate(this)">
+        <center>
+            <h1>User Registration</h1>
+            <p class="success">
+                Registration is done
+            </p>
+            <p class="errorbig">
+                Login Id already exists
+            </p>
+            <input type="hidden" name="id" value="0">
+            <input type="hidden" name="createdBy" value="root">
+            <input type="hidden" name="modifiedBy" value="root">
+            <input type="hidden" name="createdDatetime" value="1613535683663">
+            <input type="hidden" name="modifiedDatetime" value="1613535683663">
+            <table>
+
+                <tr>
+                    <td class="label">First Name <span class="errorbig">*</span></td>
+                    <td><input type="text" name="firstName" value="">
+                        <font id="error.firstName" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Last Name<span class="errorbig">*</span></td>
+                    <td><input type="text" name="lastName" value="">
+                        <font id="error.lastName" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">LoginId<span class="errorbig">*</span></td>
+                    <td><input type="text" name="login" placeholder="Must be Email ID" value="">
+                        <font id="error.login" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Password<span class="errorbig">*</span></td>
+                    <td><input type="password" name="password" value="">
+                        <font id="error.password" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Confirm Password<span class="errorbig">*</span></td>
+                    <td><input type="password" name="confirmPassword" value="">
+                        <font id="error.confirmPassword" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Gender</td>
+                    <td>
+                        <select class='form-control' name='gender'>
+                            <option selected value='F'>Female</option>
+                            <option value='M'>Male</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Date Of Birtd (mm/dd/yyyy)</td>
+                    <td>
+                        <input type="date" name="dob" id="dateofbirth">
+                        <font id="error.dob" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="2">
+                        <input type="submit" name="operation" value="SignUp">
+                    </td>
+                </tr>
+            </table>
+    </form>
+    </center>
+    <HR>
+    <CENTER>
+        <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
+    </CENTER>
+</body>
+
+</html>

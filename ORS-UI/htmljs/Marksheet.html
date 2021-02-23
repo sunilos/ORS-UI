@@ -3,11 +3,77 @@
 <head>
     <link rel="stylesheet" href="app.css">
     </link>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script>
+        function clearMessage(frm) {
+            resetInput(frm.rollNo);
+            resetInput(frm.studentId);
+            resetInput(frm.physics);
+            resetInput(frm.chemistry);
+            resetInput(frm.maths);
+        }
 
+        function validate(frm) {
+            var flag = true;
+            clearMessage(frm);
+            if (isEmpty(frm.rollNo.value)) {
+                errorInput(frm.rollNo, "Roll No is required");
+                flag = false;
+            }
+            if (isEmpty(frm.studentId.value)) {
+                errorInput(frm.studentId, "Student is required");
+                flag = false;
+            }
+            if (isEmpty(frm.physics.value)) {
+                errorInput(frm.physics, "Physics is required");
+                flag = false;
+            } else {
+                if (isNumber(frm.physics.value)) {
+                    if (parseInt(frm.physics.value) > 100) {
+
+                        errorInput(frm.physics, "Physics must be between 0 to 100");
+                        flag = false;
+                    }
+                } else {
+                    errorInput(frm.physics, "Physics must be a number");
+                    flag = false;
+                }
+            }
+            if (isEmpty(frm.chemistry.value)) {
+                errorInput(frm.chemistry, "Chemistry is required");
+                flag = false;
+            } else {
+                if (isNumber(frm.chemistry.value)) {
+                    if (parseInt(frm.chemistry.value) > 100) {
+                        errorInput(frm.chemistry, "Chemistry must be between 0 to 100");
+                        flag = false;
+                    }
+                } else {
+                    errorInput(frm.chemistry, "Chemistry must be a number");
+                    flag = false;
+                }
+            }
+            if (isEmpty(frm.maths.value)) {
+                errorInput(frm.maths, "Maths is required");
+                flag = false;
+            } else {
+                if (isNumber(frm.maths.value)) {
+                    if (parseInt(frm.maths.value) > 100) {
+                        errorInput(frm.maths, "Maths must be between 0 to 100");
+                        flag = false;
+                    }
+                } else {
+                    errorInput(frm.maths, "Maths must be a number");
+                    flag = false;
+                }
+            }
+            return flag;
+        }
+    </script>
 </head>
 
 <body>
-
     <table width="100%" border="0">
         <tr>
             <td width="90%"><a href="welcome.html">Welcome</b></a> |
@@ -81,7 +147,7 @@
     </table>
     <hr>
     <center>
-        <form action="">
+        <form action="MarksheetList.html" onsubmit="return validate(this)">
             <h1>Add Marksheet</h1>
             <H2>
                 <p class="errorbig">Marksheet is not saved
@@ -101,7 +167,7 @@
                 <tr>
                     <td class="label">Roll No</td>
                     <td><input type="text" name="rollNo" value="">
-                        <font class="error"> Roll Number is required</font>
+                        <font id="error.rollNo" class="error"></font>
                     </td>
                 </tr>
                 <tr>
@@ -131,23 +197,26 @@
                             <option value='14'>rakesh varma12</option>
                             <option value='17'>shyam gupta</option>
                             <option value='8'>t choudhary</option>
+                        </select>
+                        <font id="error.studentId" class="error"></font>
+                    </td>
                 </tr>
                 <tr>
                     <td class="label">Physics</td>
                     <td><input type="text" name="physics" value="200">
-                        <font class="error"> Marks can not be greater than 100</font>
+                        <font id="error.physics" class="error"></font>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">Chemistry</td>
                     <td><input type="text" name="chemistry" value="200">
-                        <font class="error"> Marks can not be greater than 100</font>
+                        <font id="error.chemistry" class="error"></font>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">Maths</td>
                     <td><input type="text" name="maths" value="200">
-                        <font class="error"> Marks can not be greater than 100</font>
+                        <font id="error.maths" class="error"></font>
                     </td>
 
                 </tr>

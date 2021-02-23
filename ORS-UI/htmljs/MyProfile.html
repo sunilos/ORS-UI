@@ -3,9 +3,49 @@
 <head>
     <link rel="stylesheet" href="app.css">
     </link>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script>
+        function clearMessage(frm) {
+            resetInput(frm.firstName);
+            resetInput(frm.lastName);
+            resetInput(frm.dob);
+            resetInput(frm.login);
+            resetInput(frm.mobileNo);
+        }
+
+        function validate(frm) {
+            var flag = true;
+            clearMessage(frm);
+            if (isEmpty(frm.login.value)) {
+                errorInput(frm.login, "Login Id is required");
+                flag = false;
+            }
+            if (isEmpty(frm.mobileNo.value)) {
+                errorInput(frm.mobileNo, "MobileNo is required");
+                flag = false;
+            }
+            if (isEmpty(frm.firstName.value)) {
+                errorInput(frm.firstName, "Firs tName is required");
+                flag = false;
+            }
+            if (isEmpty(frm.lastName.value)) {
+                errorInput(frm.lastName, "Last Name  is required");
+                flag = false;
+            }
+            if (isEmpty(frm.dob.value)) {
+                errorInput(frm.dob, "Date of Birth is required");
+                flag = false;
+            }
+            return flag;
+        }
+    </script>
+
+
 </head>
 
 <body>
+
     <table widtd="100%" border="0">
         <tr>
             <td widtd="90%"><a href="welcome.html">Welcome</b></a> |
@@ -77,55 +117,79 @@
         </tr>
     </table>
     <hr>
-    <center>
+    <form action="ChangePassword.html" onsubmit="return validate(this)">
 
-        <form action="index.html">
-            <h1>Change Password</h1>
+        <center>
+            <h1>My Profile</h1>
+
             <H2>
                 <font class="error">
                 </font>
             </H2>
-            <input type="hidden" name="id" value="0">
-            <input type="hidden" name="createdBy" value="admin@gmail.com">
-            <input type="hidden" name="modifiedBy" value="admin@gmail.com">
-            <input type="hidden" name="createdDatetime" value="1613536685933">
-            <input type="hidden" name="modifiedDatetime" value="1613536685933">
+
+            <input type="hidden" name="id" value="36">
+            <input type="hidden" name="createdBy" value="rahul.sahu@nenosystems.com">
+            <input type="hidden" name="modifiedBy" value="rahul.sahu@nenosystems.com">
+            <input type="hidden" name="createdDatetime" value="1411998250000">
+            <input type="hidden" name="modifiedDatetime" value="0">
 
             <table>
                 <tr>
-                    <td>Old Password <span class="errorbig">*</span></td>
-                    <td><input type="password" name="oldPassword" value=>
-                        <font class="error"> Old Password is required</font>
+                    <td>LoginId <span class="errorbig">*</span> </td>
+                    <td><input type="text" name="login" value="admin@gmail.com" readonly="readonly">
+                        <font id="error.login" class="error"> </font>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>New Password <span class="errorbig">*</span></td>
-                    <td><input type="password" name="newPassword" value=>
-                        <font class="error"> New Password is required</font>
+                    <td>First Name <span class="errorbig">*</span></td>
+                    <td><input type="text" name="firstName" value="">
+                        <font id="error.firstName" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name <span class="errorbig">*</span></td>
+                    <td><input type="text" name="lastName" value="">
+                        <font id="error.lastName" class="error"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <select class='form-control' name='gender'>
+                            <option selected value='F'>Female</option>
+                            <option value='M'>Male</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile No <span class="errorbig">*</span></td>
+                    <td><input type="text" name="mobileNo" value="">
+                        <font id="error.mobileNo" class="error"> </font>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>Confirm Password <span class="errorbig">*</span></td>
-                    <td><input type="password" name="confirmPassword" value=>
-                        <font class="error"> Confirm Password is required</font>
+                    <td>Date Of Birtd (mm/dd/yyyy)</td>
+                    <td>
+                        <input type="date" name="dob" id="dateofbirtd">
+                        <font id="error.dob" class="error"> </font>
                     </td>
                 </tr>
-
                 <tr>
-                    <td colspan="2" align="right">
+                    <td></td>
+                    <td colspan="2">
                         <input type="submit" name="operation" value="Save"> &nbsp;
-                        <input type="submit" name="operation" value="Change My Profile"> &nbsp;
+                        <input type="submit" name="operation" value="ChangePassword"> &nbsp;
                     </td>
                 </tr>
-
             </table>
-        </form>
+    </form>
     </center>
     <HR>
     <CENTER>
         <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
+
     </CENTER>
 </body>
 

@@ -3,12 +3,29 @@
 <head>
     <link rel="stylesheet" href="app.css">
     </link>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script>
+        function clearMessage(frm) {
+            resetInput(frm.rollNo);
+        }
+
+        function validate(frm) {
+            var flag = true;
+            clearMessage(frm);
+            if (isEmpty(frm.rollNo.value)) {
+                errorInput(frm.rollNo, "Roll No is required");
+                flag = false;
+            }
+            return flag;
+        }
+    </script>
 </head>
 
 <body>
-    <table widtd="100%" border="0">
+    <table width="100%" border="0">
         <tr>
-            <td widtd="90%"><a href="welcome.html">Welcome</b></a> |
+            <td width="90%"><a href="welcome.html">Welcome</b></a> |
                 <a href="index.html">Logout</b></a>
             </td>
             <td rowspan="2">
@@ -20,7 +37,7 @@
         <tr>
             <td>
                 <h3>
-                    Hi, admin (Admin)</h3>
+                    Hi, Admin (Admin)</h3>
             </td>
         </tr>
         <tr>
@@ -30,7 +47,7 @@
                     <div class="dropdown-content">
                         <a href="GetMarksheet.html">Get Marksheet</b></a>
                         <a href="MarksheetMeritList.html">Marksheet MeritList</b>
-                        <a href="Marksheet.html">Add Marksheet</b></a>
+                            <a href="Marksheet.html">Add Marksheet</b></a>
                         <a href="MarksheetList.html">Marksheet List</b></a>
                     </div>
                 </div>
@@ -73,54 +90,30 @@
                     </div>
                 </div>
             </td>
-
         </tr>
     </table>
     <hr>
     <center>
-
-        <form action="index.html">
-            <h1>Change Password</h1>
-            <H2>
-                <font class="error">
-                </font>
-            </H2>
+        <h1>Get Marksheet</h1>
+        <h2 class="errorbig">Role number is not found </h2>
+        <form action="Marksheet.html" onsubmit="return validate(this)">
             <input type="hidden" name="id" value="0">
-            <input type="hidden" name="createdBy" value="admin@gmail.com">
-            <input type="hidden" name="modifiedBy" value="admin@gmail.com">
-            <input type="hidden" name="createdDatetime" value="1613536685933">
-            <input type="hidden" name="modifiedDatetime" value="1613536685933">
-
             <table>
                 <tr>
-                    <td>Old Password <span class="errorbig">*</span></td>
-                    <td><input type="password" name="oldPassword" value=>
-                        <font class="error"> Old Password is required</font>
+                    <td class="label">
+                        Roll No:
                     </td>
-                </tr>
-
-                <tr>
-                    <td>New Password <span class="errorbig">*</span></td>
-                    <td><input type="password" name="newPassword" value=>
-                        <font class="error"> New Password is required</font>
+                    <td>
+                        <input type="text" name="rollNo" value="">&emsp;
+                        <font id="error.rollNo" class="error"></font>
                     </td>
-                </tr>
-
-                <tr>
-                    <td>Confirm Password <span class="errorbig">*</span></td>
-                    <td><input type="password" name="confirmPassword" value=>
-                        <font class="error"> Confirm Password is required</font>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2" align="right">
-                        <input type="submit" name="operation" value="Save"> &nbsp;
-                        <input type="submit" name="operation" value="Change My Profile"> &nbsp;
-                    </td>
-                </tr>
-
+                    <tr>
+                        <td colspan="2" align="right">
+                            <input type="submit" name="operation" value="Go">
+                        </td>
+                    </tr>
             </table>
+
         </form>
     </center>
     <HR>

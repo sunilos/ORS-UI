@@ -1,0 +1,225 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="app.css">
+    </link>
+
+</head>
+
+<body>
+    <table width="100%" border="0">
+        <tr>
+            <td width="90%"><a href="welcome.html">Welcome</b></a> |
+                <a href="index.html">Logout</b></a>
+            </td>
+            <td rowspan="2">
+                <h1 align="Right">
+                    <img src="../img/logo.png" height="80">
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Hi, admin (Admin)</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="dropdown">
+                    <button class="dropbtn">Marksheet</button>
+                    <div class="dropdown-content">
+                        <a href="GetMarksheet.html">Get Marksheet</b></a>
+                        <a href="MarksheetMeritList.html">Marksheet MeritList</b>
+                        <a href="Marksheet.html">Add Marksheet</b></a>
+                        <a href="MarksheetList.html">Marksheet List</b></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">User</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add User</b></a>
+                        <a href="NotFound.html">User List</b></a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">College</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add College</b></a>
+                        <a href="NotFound.html">CollegeList</b></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Student</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add Student</b></a>
+                        <a href="NotFound.html">Student List</b></a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Role</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add Role</b></a>
+                        <a href="NotFound.html">Role List</b></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About us</button>
+                    <div class="dropdown-content">
+                        <a href="MyProfile.html">MyProfile</b></a>
+                        <a href="ChangePassword.html">Change Password</b></a>
+                        <a href="NotFound.html">Java Doc</b></a>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+    <hr>
+
+    <center>
+
+        <h1>Marksheet List</h1>
+
+        <form action="">
+
+            <table width="100%">
+                <tr>
+                    <td align="center"><label> Name :</label> <input type="text" name="name" value=""> &emsp; <label>RollNo :</label> <input type="text" name="rollNo" value="">&emsp;
+                        <input type="submit" name="operation" value="Search">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table border="1" cellspacing="0" width="90%">
+                <tr>
+                    <th>Select</th>
+                    <th>ID</th>
+                    <th>RollNo</th>
+                    <th>Name</th>
+                    <th>Physics</th>
+                    <th>Chemistry</th>
+                    <th>Maths</th>
+                    <th>Edit</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="1"></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Rajesh Verma</td>
+                    <td>99</td>
+                    <td>77</td>
+                    <td>99</td>
+                    <td><a href="Marksheet.html?id=1">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="2"></td>
+                    <td>2</td>
+                    <td>88</td>
+                    <td>Ashish Nehra</td>
+                    <td>88</td>
+                    <td>33</td>
+                    <td>33</td>
+                    <td><a href="Marksheet.html?id=2">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="3"></td>
+                    <td>3</td>
+                    <td>12</td>
+                    <td>Manish Sharma</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td><a href="Marksheet.html?id=3">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="4"></td>
+                    <td>4</td>
+                    <td>19</td>
+                    <td>Manish Sharma</td>
+                    <td>33</td>
+                    <td>33</td>
+                    <td>33</td>
+                    <td><a href="Marksheet.html?id=4">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="5"></td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>mohan lal</td>
+                    <td>77</td>
+                    <td>77</td>
+                    <td>77</td>
+                    <td><a href="Marksheet.html?id=5">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="7"></td>
+                    <td>7</td>
+                    <td>15</td>
+                    <td>Manish Sharma</td>
+                    <td>44</td>
+                    <td>44</td>
+                    <td>44</td>
+                    <td><a href="Marksheet.html?id=7">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="8"></td>
+                    <td>8</td>
+                    <td>11</td>
+                    <td>Manish Sharma</td>
+                    <td>47</td>
+                    <td>47</td>
+                    <td>14</td>
+                    <td><a href="Marksheet.html?id=8">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="9"></td>
+                    <td>9</td>
+                    <td>18</td>
+                    <td>mohan lal</td>
+                    <td>88</td>
+                    <td>89</td>
+                    <td>88</td>
+                    <td><a href="Marksheet.html?id=9">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="10"></td>
+                    <td>10</td>
+                    <td>21</td>
+                    <td>Manish Sharma</td>
+                    <td>58</td>
+                    <td>58</td>
+                    <td>59</td>
+                    <td><a href="Marksheet.html?id=10">Edit</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids" value="12"></td>
+                    <td>12</td>
+                    <td>666</td>
+                    <td>Manish Sharma</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td><a href="Marksheet.html?id=12">Edit</a></td>
+                </tr>
+            </table>
+            <table width="100%">
+                <tr>
+                    <td><input type="submit" name="operation" value="Previous"></td>
+                    <td><input type="submit" name="operation" value="New"></td>
+                    <td><input type="submit" name="operation" value="Delete"></td>
+                    <td align="right"><input type="submit" name="operation" value="Next"></td>
+                </tr>
+            </table>
+            <input type="hidden" name="pageNo" value="1"> <input type="hidden" name="pageSize" value="10">
+        </form>
+    </center>
+    <HR>
+    <CENTER>
+        <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
+    </CENTER>
+</body>
+
+</html>
