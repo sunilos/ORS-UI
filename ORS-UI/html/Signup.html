@@ -24,17 +24,15 @@
         </tr>
     </table>
     <hr>
-    <form action="/ORSProject4/UserRegistrationCtl">
+    <form action="index.html">
         <center>
             <h1>User Registration</h1>
-            <H2>
-                <font color="green">
-                </font>
-            </H2>
-            <H2>
-                <font color="red">
-                </font>
-            </H2>
+            <p class="success">
+                Registration is done
+            </p>
+            <p class="errorbig">
+                Login Id already exists
+            </p>
             <input type="hidden" name="id" value="0">
             <input type="hidden" name="createdBy" value="root">
             <input type="hidden" name="modifiedBy" value="root">
@@ -84,18 +82,15 @@
                 </tr>
 
                 <tr>
-                    <th>Date Of Birth (mm/dd/yyyy)</th>
-                    <td><input type="text" name="dob" readonly="readonly" value=""> <a
-                            href="javascript:getCalendar(document.forms[0].dob);"> <img src="./img/cal.jpg" width="16"
-                                height="15" border="0" alt="Calender">
-                        </a>
-                        <font color="red"> Date Of Birth is required</font>
+                    <td>Date Of Birtd (mm/dd/yyyy)</td>
+                    <td>
+                        <input type="date" name="dob" id="dateofbirth">
+                        <font class="error"> Date Of Birtd is required</font>
                     </td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <td colspan="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        &nbsp; <input type="submit" name="operation" value="SignUp">
+                    <td align="right" colspan="2">
+                        <input type="submit" name="operation" value="SignUp">
                     </td>
                 </tr>
             </table>

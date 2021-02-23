@@ -7,7 +7,7 @@
 
     <table width="100%" border="0">
         <tr>
-            <td width="90%"><a href="welcome.html">Welcome</b></a> |
+            <td widtd="90%"><a href="welcome.html">Welcome</b></a> |
                 <a href="index.html">Logout</b></a>
             </td>
             <td rowspan="2">
@@ -42,7 +42,7 @@
         </tr>
     </table>
     <hr>
-    <form action="/ORSProject4/ctl/MyProfileCtl">
+    <form action="ChangePassword.html">
 
         <center>
             <h1>My Profile</h1>
@@ -95,24 +95,17 @@
                 </tr>
 
                 <tr>
-                    <th>Date Of Birth (mm/dd/yyyy)</th>
-                    <td><input type="text" name="dob" readonly="readonly" value="09/24/2000">
-                        <a href="javascript:getCalendar(document.forms[0].dob);">
-                            <img src="../img/cal.jpg" width="16" height="15" border="0" alt="Calender">
-                        </a>
-                        <font color="red"> </font>
+                    <td>Date Of Birth (mm/dd/yyyy)</td>
+                    <td>
+                        <input type="date" name="dob" id="dateofbirtd">
+                        <font class="error"> </font>
                     </td>
                 </tr>
-
-                <H2>
-                    <font color="green">
-                    </font>
-                </H2>
-
                 <tr>
-                    <th></th>
-                    <td colspan="2"><input type="submit" name="operation" value="ChangePassword"> &nbsp; <input
-                            type="submit" name="operation" value="Save"> &nbsp;</td>
+                    <td colspan="2">
+                        <input type="submit" name="operation" value="Save"> &nbsp;
+                        <input type="submit" name="operation" value="ChangePassword"> &nbsp;
+                    </td>
                 </tr>
             </table>
     </form>
@@ -120,6 +113,7 @@
     <HR>
     <CENTER>
         <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
+
     </CENTER>
 </body>
 
