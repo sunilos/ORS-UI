@@ -1,8 +1,10 @@
+/**Display error message t0 "error.<fname>" element */
 function dislayError(fname, msg) {
     var errorTag = "error." + fname;
     document.getElementById(errorTag).innerHTML = msg;
           }
 
+/**Display success message t0 "success.<fname>" element */
 function dislaySuccess(fname, msg) {
     var errorTag = "success." + fname;
     document.getElementById(errorTag).innerHTML = msg;
@@ -29,3 +31,38 @@ function resetInput(ele) {
     var errorTag = "error." + ele.name;
     document.getElementById(errorTag).innerHTML = "";
     }
+
+/**
+ * Make AJAX HTTP GET call
+ * @param {*} url 
+ * @param {*} callback 
+ */
+function httpGet(url, callback) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            callback(obj);
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+/**
+ * Make AJAX HTTP POST call
+ * @param {*} url 
+ * @param {*} jsonData 
+ * @param {*} callback 
+ */
+function httPost(url, jsonData, callback) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            callback(obj);
+        }
+    };
+    xhttp.open("POST", url, true);
+    xhttp.send();
+}

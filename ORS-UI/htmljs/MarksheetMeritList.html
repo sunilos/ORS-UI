@@ -3,7 +3,42 @@
 <head>
     <link rel="stylesheet" href="app.css">
     </link>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script>
+        function get() {
+            //alert(http.post);
+            var url = "http://nenosystems.in:9095/NCSSSO/api/test/marksheet";
+            httpGet(url, function(data) {
+                search(data);
+            });
+        }
 
+        function search(data) {
+            var table = document.getElementById("dataTable");
+            //alert(table);
+
+            // Create an empty <tr> element and add it to the 1st position of the table:
+            var row = table.insertRow(0);
+
+            // insert rows of data
+            for (var i = 0; i < data.length; i++) {
+                var rowData = data[i];
+                row = table.insertRow();
+
+                //Add sequence number 
+                row.insertCell().innerText = i + 1;
+
+                //Add data from JSON object array
+                var keys = Object.keys(rowData); //Get keys of JSON object
+                for (var j = 0; j < keys.length; j++) {
+                    var elem = rowData[keys[j]];
+                    row.insertCell().innerText = elem;
+                }
+
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -79,97 +114,16 @@
     </table>
     <hr>
     <center>
-        <h1>Marksheet Merit List</h1>
-        <form action="">
+        <h1>Marksheet Merit List <button class="primary" onclick="get()">Get List</button></h1>
             <br>
-            <table border="1" cellspacing="0" width="90%">
+        <table border="1" cellspacing="0" width="90%" id="dataTable">
                 <tr>
-                    <th>ID</th>
-                    <th>Roll No</th>
+                <th width="5%">ID</th>
+                <th width="10%">RollNo</th>
                     <th>Name</th>
-                    <th>Physics</th>
-                    <th>Chemistry</th>
-                    <th>Maths</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>B111</td>
-                    <td>Vipul Baser</td>
-                    <td>99</td>
-                    <td>100</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>A111</td>
-                    <td>Ashutosh Upadhyay</td>
-                    <td>99</td>
-                    <td>100</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>A1</td>
-                    <td>ABBY</td>
-                    <td>99</td>
-                    <td>99</td>
-                    <td>99</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>Rajesh Verma</td>
-                    <td>99</td>
-                    <td>77</td>
-                    <td>99</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>18</td>
-                    <td>mohan lal</td>
-                    <td>88</td>
-                    <td>89</td>
-                    <td>88</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>Ashish Nehra</td>
-                    <td>88</td>
-                    <td>88</td>
-                    <td>88</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>10</td>
-                    <td>mohan lal</td>
-                    <td>77</td>
-                    <td>77</td>
-                    <td>77</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>Manish Sharma</td>
-                    <td>66</td>
-                    <td>66</td>
-                    <td>66</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>21</td>
-                    <td>Manish Sharma</td>
-                    <td>58</td>
-                    <td>58</td>
-                    <td>59</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>30</td>
-                    <td>Rajendra Manli</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
+                <th width="10%">Physics</th>
+                <th width="10%">Chemistry</th>
+                <th width="10%">Maths</th>
                 </tr>
             </table>
             <table>
@@ -177,8 +131,6 @@
                     <td align="right"><input type="submit" name="operation" value="Back"></td>
                 </tr>
             </table>
-            <input type="hidden" name="pageNo" value="1"> <input type="hidden" name="pageSize" value="10">
-        </form>
     </center>
     <HR>
     <CENTER>

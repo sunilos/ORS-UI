@@ -51,6 +51,16 @@ INPUT[type=submit] {
     border-radius: 5px;
 }
 
+.primary {
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 
 /* Form Label */
 

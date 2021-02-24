@@ -4,6 +4,78 @@
     <link rel="stylesheet" href="app.css">
     </link>
 
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script>
+        var data = [{
+            "rollNo": "A1",
+            "name": "Ram",
+            "physics": 70,
+            "chemistry": 90,
+            "Maths": 80
+        }, {
+            "rollNo": "A2",
+            "name": "Shyam",
+            "physics": 70,
+            "chemistry": 90,
+            "Maths": 80
+        }, {
+            "rollNo": "A3",
+            "name": "Balram",
+            "physics": 70,
+            "chemistry": 90,
+            "Maths": 80
+        }, {
+            "rollNo": "A4",
+            "name": "Ajay",
+            "physics": 70,
+            "chemistry": 90,
+            "Maths": 80
+        }, {
+            "rollNo": "A5",
+            "name": "Vijay",
+            "physics": 70,
+            "chemistry": 90,
+            "Maths": 80
+        }];
+
+        function search() {
+            var table = document.getElementById("dataTable");
+            //alert(table);
+
+            // Create an empty <tr> element and add it to the 1st position of the table:
+            var row = table.insertRow(0);
+
+            // insert rows of data
+            for (var i = 0; i < data.length; i++) {
+                var rowData = data[i];
+                row = table.insertRow();
+
+                //Add Checkbox
+                var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "ids";
+                var col = row.insertCell();
+                col.appendChild(input);
+
+                //Add sequence number 
+                row.insertCell().innerText = i + 1;
+
+                //Add data from JSON object array
+                var keys = Object.keys(rowData); //Get keys of JSON object
+                for (var j = 0; j < keys.length; j++) {
+                    var elem = rowData[keys[j]];
+                    row.insertCell().innerText = elem;
+                }
+                //Create edit link
+                var anc = document.createElement("A");
+                var t = document.createTextNode("Edit");
+                anc.setAttribute("href", "Marksheet.html?id=2");
+                anc.appendChild(t);
+                row.insertCell().appendChild(anc);
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -83,129 +155,27 @@
 
         <h1>Marksheet List</h1>
 
-        <form action="">
-
             <table width="100%">
                 <tr>
                     <td align="center"><label> Name :</label> <input type="text" name="name" value=""> &emsp; <label>RollNo :</label> <input type="text" name="rollNo" value="">&emsp;
-                        <input type="submit" name="operation" value="Search">
+                    <button class="primary" onclick="search()">Search</button>
                     </td>
                 </tr>
             </table>
             <br>
-            <table border="1" cellspacing="0" width="90%">
+            <table border="1" cellspacing="0" width="90%" id="dataTable">
                 <tr>
-                    <th>Select</th>
-                    <th>ID</th>
-                    <th>RollNo</th>
+                    <th width="10%">Select <input type="checkbox"></th>
+                    <th width="5%">ID</th>
+                    <th width="10%">RollNo</th>
                     <th>Name</th>
-                    <th>Physics</th>
-                    <th>Chemistry</th>
-                    <th>Maths</th>
-                    <th>Edit</th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="1"></td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>Rajesh Verma</td>
-                    <td>99</td>
-                    <td>77</td>
-                    <td>99</td>
-                    <td><a href="Marksheet.html?id=1">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="2"></td>
-                    <td>2</td>
-                    <td>88</td>
-                    <td>Ashish Nehra</td>
-                    <td>88</td>
-                    <td>33</td>
-                    <td>33</td>
-                    <td><a href="Marksheet.html?id=2">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="3"></td>
-                    <td>3</td>
-                    <td>12</td>
-                    <td>Manish Sharma</td>
-                    <td>11</td>
-                    <td>11</td>
-                    <td>11</td>
-                    <td><a href="Marksheet.html?id=3">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="4"></td>
-                    <td>4</td>
-                    <td>19</td>
-                    <td>Manish Sharma</td>
-                    <td>33</td>
-                    <td>33</td>
-                    <td>33</td>
-                    <td><a href="Marksheet.html?id=4">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="5"></td>
-                    <td>5</td>
-                    <td>10</td>
-                    <td>mohan lal</td>
-                    <td>77</td>
-                    <td>77</td>
-                    <td>77</td>
-                    <td><a href="Marksheet.html?id=5">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="7"></td>
-                    <td>7</td>
-                    <td>15</td>
-                    <td>Manish Sharma</td>
-                    <td>44</td>
-                    <td>44</td>
-                    <td>44</td>
-                    <td><a href="Marksheet.html?id=7">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="8"></td>
-                    <td>8</td>
-                    <td>11</td>
-                    <td>Manish Sharma</td>
-                    <td>47</td>
-                    <td>47</td>
-                    <td>14</td>
-                    <td><a href="Marksheet.html?id=8">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="9"></td>
-                    <td>9</td>
-                    <td>18</td>
-                    <td>mohan lal</td>
-                    <td>88</td>
-                    <td>89</td>
-                    <td>88</td>
-                    <td><a href="Marksheet.html?id=9">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="10"></td>
-                    <td>10</td>
-                    <td>21</td>
-                    <td>Manish Sharma</td>
-                    <td>58</td>
-                    <td>58</td>
-                    <td>59</td>
-                    <td><a href="Marksheet.html?id=10">Edit</a></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="ids" value="12"></td>
-                    <td>12</td>
-                    <td>666</td>
-                    <td>Manish Sharma</td>
-                    <td>12</td>
-                    <td>12</td>
-                    <td>12</td>
-                    <td><a href="Marksheet.html?id=12">Edit</a></td>
+                    <th width="10%">Physics</th>
+                    <th width="10%">Chemistry</th>
+                    <th width="10%">Maths</th>
+                    <th width="10%">Edit</th>
                 </tr>
             </table>
-            <table width="100%">
+            <table width="90%">
                 <tr>
                     <td><input type="submit" name="operation" value="Previous"></td>
                     <td><input type="submit" name="operation" value="New"></td>
@@ -213,8 +183,6 @@
                     <td align="right"><input type="submit" name="operation" value="Next"></td>
                 </tr>
             </table>
-            <input type="hidden" name="pageNo" value="1"> <input type="hidden" name="pageSize" value="10">
-        </form>
     </center>
     <HR>
     <CENTER>
