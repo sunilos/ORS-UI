@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="app.css">
+    </link>
+
+</head>
+
+<body>
+
+    <table width="100%" border="0">
+        <tr>
+            <td width="90%"><a href="welcome.html">Welcome</b></a> |
+                <a href="index.html">Logout</b></a>
+            </td>
+            <td rowspan="2">
+                <h1 align="Right">
+                    <img src="../img/logo.png" height="80">
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Hi, Admin (Admin)
+                </h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="dropdown">
+                    <button class="dropbtn">Marksheet</button>
+                    <div class="dropdown-content">
+                        <a href="GetMarksheet.html">Get Marksheet</b></a>
+                        <a href="MarksheetMeritList.html">Marksheet MeritList</b>
+                        <a href="Marksheet.html">Add Marksheet</b></a>
+                        <a href="MarksheetList.html">Marksheet List</b></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">User</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add User</b></a>
+                        <a href="NotFound.html">User List</b></a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">College</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add College</b></a>
+                        <a href="NotFound.html">CollegeList</b></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Student</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add Student</b></a>
+                        <a href="NotFound.html">Student List</b></a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Role</button>
+                    <div class="dropdown-content">
+                        <a href="NotFound.html">Add Role</b></a>
+                        <a href="NotFound.html">Role List</b></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About us</button>
+                    <div class="dropdown-content">
+                        <a href="MyProfile.html">MyProfile</b></a>
+                        <a href="ChangePassword.html">Change Password</b></a>
+                        <a href="NotFound.html">Java Doc</b></a>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+    <hr>
+    <center>
+        <form action="">
+            <h1>Add Marksheet</h1>
+            <H2>
+                <p class="errorbig">Marksheet is not saved
+                </p>
+            </H2>
+            <H2>
+                <p class="success">Marksheet is saved
+                </p>
+            </H2>
+            <input type="hidden" name="id" value="0">
+            <input type="hidden" name="createdBy" value="null">
+            <input type="hidden" name="modifiedBy" value="null">
+            <input type="hidden" name="createdDatetime" value="0">
+            <input type="hidden" name="modifiedDatetime" value="0">
+
+            <table>
+                <tr>
+                    <td class="label">Roll No</td>
+                    <td><input type="text" name="rollNo" value="">
+                        <font class="error"> Roll Number is required</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Name*</td>
+                    <td><select name='studentId'>
+                            <option selected value=''>--Select--</option>
+                            <option value='3'>Ashish Nehra</option>
+                            <option value='2'>Manish Sharma</option>
+                            <option value='15'>Pankaj Sahu</option>
+                            <option value='16'>RAM GUPTA</option>
+                            <option value='1'>Rahul Sahu</option>
+                            <option value='23'>abhi gyanganga</option>
+                            <option value='19'>hari lnct</option>
+                            <option value='22'>hemant gyanganga</option>
+                            <option value='5'>hfghhfg fgd</option>
+                            <option value='21'>kamlesh gyanganga</option>
+                            <option value='6'>mohan lal</option>
+                            <option value='18'>mohan lnct</option>
+                            <option value='24'>neel gyanganga</option>
+                            <option value='20'>pankaj lnct</option>
+                            <option value='11'>r rr</option>
+                            <option value='25'>rahul gyanganga</option>
+                            <option value='10'>rajesh hj</option>
+                            <option value='7'>rajesh sharma</option>
+                            <option value='9'>raju mali</option>
+                            <option value='13'>rakesh varma</option>
+                            <option value='14'>rakesh varma12</option>
+                            <option value='17'>shyam gupta</option>
+                            <option value='8'>t choudhary</option>
+                         </select>
+                       </td>
+                </tr>
+                <tr>
+                    <td class="label">Physics</td>
+                    <td><input type="text" name="physics" value="200">
+                        <font class="error"> Marks can not be greater than 100</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Chemistry</td>
+                    <td><input type="text" name="chemistry" value="200">
+                        <font class="error"> Marks can not be greater than 100</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Maths</td>
+                    <td><input type="text" name="maths" value="200">
+                        <font class="error"> Marks can not be greater than 100</font>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" name="operation" value="Save"> <input type="submit" name="operation" value="Cancel"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <HR>
+    <CENTER>
+        <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
+    </CENTER>
+</body>
+
+</html>
