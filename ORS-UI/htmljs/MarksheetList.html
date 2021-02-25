@@ -1,9 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="app.css">
-    </link>
-
+    <link rel="stylesheet" href="app.css" />
     <script src="../js/app.js"></script>
     <script src="../js/validation.js"></script>
     <script>
@@ -39,9 +37,45 @@
             "Maths": 80
         }];
 
-        function search() {
+        /**
+         * Sort list and display
+         */
+        function orderAndSearch(property) {
+            if (property) {
+                data.sort(orderBy(property));
+            } else {
+                data.sort(orderBy("rollNo"));
+            }
+            display(data);
+        }
+
+        /**
+         * Search and display the list   
+         */
+        function search(frm) {
+            var newData = data;
+            if (frm) {
+                if (!isEmpty(frm.name.value)) {
+                    newData = [];
+                    var len = data.length;
+                    alert(len);
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].name.startsWith(frm.name.value)) {
+                            newData.push(data[i]);
+                        }
+                    }
+                }
+            }
+            display(newData);
+        }
+
+        /**
+         * Display the list 
+         */
+        function display(data) {
+
             var table = document.getElementById("dataTable");
-            //alert(table);
+            //clearTable(table);
 
             // Create an empty <tr> element and add it to the 1st position of the table:
             var row = table.insertRow(0);
@@ -73,6 +107,20 @@
                 anc.setAttribute("href", "Marksheet.html?id=2");
                 anc.appendChild(t);
                 row.insertCell().appendChild(anc);
+            }
+        }
+
+        /**
+         * Clear the table 
+         */
+        function clearTable(table) {
+            var rows = table.rows;
+            var i = rows.length;
+            alert(i);
+            while (--i) {
+                alert(rows[i]["class"]);
+                //rows[i].parentNode.removeChild(rows[i]);
+                table.deleteRow(i);
             }
         }
     </script>
@@ -155,34 +203,43 @@
 
         <h1>Marksheet List</h1>
 
-            <table width="100%">
-                <tr>
-                    <td align="center"><label> Name :</label> <input type="text" name="name" value=""> &emsp; <label>RollNo :</label> <input type="text" name="rollNo" value="">&emsp;
-                    <button class="primary" onclick="search()">Search</button>
-                    </td>
-                </tr>
-            </table>
-            <br>
-            <table border="1" cellspacing="0" width="90%" id="dataTable">
-                <tr>
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <form onsubmit="return false">
+                        <label> Name :</label>
+                        <input type="text" name="name" value=""> &emsp;
+                        <label>RollNo :</label>
+                        <input type="text" name="rollNo" value="">&emsp;
+                        <button class="primary" onclick="search(this.form)">Search</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" cellspacing="0" width="90%" id="dataTable">
+            <thead>
+                <tr class="head">
                     <th width="10%">Select <input type="checkbox"></th>
                     <th width="5%">ID</th>
-                    <th width="10%">RollNo</th>
-                    <th>Name</th>
+                    <th width="10%"><a href="javascript:orderAndSearch('-rollNo')">RollNo</a></th>
+                    <th><a href="javascript:orderAndSearch('name')">Name</a></th>
                     <th width="10%">Physics</th>
                     <th width="10%">Chemistry</th>
                     <th width="10%">Maths</th>
                     <th width="10%">Edit</th>
                 </tr>
-            </table>
-            <table width="90%">
-                <tr>
-                    <td><input type="submit" name="operation" value="Previous"></td>
-                    <td><input type="submit" name="operation" value="New"></td>
-                    <td><input type="submit" name="operation" value="Delete"></td>
-                    <td align="right"><input type="submit" name="operation" value="Next"></td>
-                </tr>
-            </table>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table width="90%">
+            <tr>
+                <td><input type="submit" name="operation" value="Previous"></td>
+                <td><input type="submit" name="operation" value="New"></td>
+                <td><input type="submit" name="operation" value="Delete"></td>
+                <td align="right"><input type="submit" name="operation" value="Next"></td>
+            </tr>
+        </table>
     </center>
     <HR>
     <CENTER>

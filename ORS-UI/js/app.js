@@ -5,7 +5,7 @@ function dislayError(fname, msg) {
           }
 
 /**Display success message t0 "success.<fname>" element */
-function dislaySuccess(fname, msg) {
+function displaySuccess(fname, msg) {
     var errorTag = "success." + fname;
     document.getElementById(errorTag).innerHTML = msg;
         }
