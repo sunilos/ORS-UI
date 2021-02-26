@@ -1,106 +1,130 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="app.css">
-    </link>
-    <script type="text/javascript" src="./js/calendar.js"></script>
+    <title>ORS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <table width="100%" border="0">
-        <tr>
-            <td width="90%">
-            </td>
-            <td rowspan="2">
-                <h1 align="Right">
-                    <img src="../img/logo.png" height="100">
-                </h1>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>
-                    Hi, Guest</h3>
-            </td>
-        </tr>
-    </table>
-    <hr>
-    <form action="index.html">
-        <center>
-            <h1>User Registration</h1>
-            <p class="success">
-                Registration is done
-            </p>
-            <p class="errorbig">
-                Login Id already exists
-            </p>
-            <input type="hidden" name="id" value="0">
-            <input type="hidden" name="createdBy" value="root">
-            <input type="hidden" name="modifiedBy" value="root">
-            <input type="hidden" name="createdDatetime" value="1613535683663">
-            <input type="hidden" name="modifiedDatetime" value="1613535683663">
-            <table>
+    <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="height:40px ;  color:white ; background-color:#007bff;">
+        <img src="../img/logo.png" height="30">
+        <a class="navbar-brand h1 ml-2" href="#">ORS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <tr>
-                    <td>First Name <span class="errorbig">*</span></td>
-                    <td><input type="text" name="firstName" value="">
-                        <font class="error"> First Name is required</font>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Last Name<span class="errorbig">*</span></td>
-                    <td><input type="text" name="lastName" value="">
-                        <font class="error"> Last Name is required</font>
-                    </td>
-                </tr>
-                <tr>
-                    <td>LoginId<span class="errorbig">*</span></td>
-                    <td><input type="text" name="login" placeholder="Must be Email ID" value="">
-                        <font class="error"> Login Id is required</font>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Password<span class="errorbig">*</span></td>
-                    <td><input type="password" name="password" value="">
-                        <font class="error"> Password is required</font>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Confirm Password<span class="errorbig">*</span></td>
-                    <td><input type="password" name="confirmPassword" value="">
-                        <font class="error"> Confirm Password is required</font>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Gender</td>
-                    <td>
-                        <select class='form-control' name='gender'>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container_fluid m-4">
+        <div class="container border col-sm-6">
+
+            <h4 class="border-bottom pt-2">User Registration</h4>
+
+            <div class="alert alert-danger">
+                <strong> 
+                    Invalid Id and Password
+                </strong>
+            </div>
+            <div class="alert alert-danger">
+                <strong> 
+                    Login Id is already exists
+                </strong>
+            </div>
+            <div class="alert alert-success">
+                <strong> 
+                    Invalid Id and Password
+                </strong>
+            </div>
+            <form action="index.html" class="was-validated">
+                <input type="hidden" name="id" value="0">
+                <input type="hidden" name="createdBy" value="root">
+                <input type="hidden" name="modifiedBy" value="root">
+                <input type="hidden" name="createdDatetime" value="1613535683663">
+                <input type="hidden" name="modifiedDatetime" value="1613535683663">
+                <div class="form-group form-row">
+                    <label for="firstName" class="col-sm-2 col-form-label col-form-label-sm col">
+                        FirstName <i class="fas fa-asterisk" style="color:red"></i>
+                    </label>
+                    <div class="col">
+                        <input class="form-control form-control-sm" type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label for="lastName" class="col-sm-2 col-form-label col-form-label-sm col">
+                        Last Name <i class="fas fa-asterisk" style="color:red"></i>
+                    </label>
+                    <div class="col">
+                        <input class="form-control form-control-sm" type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="form-group form-row">
+                    <label for="login" class="col-sm-2 col-form-label col-form-label-sm col">
+                        Login <i class="fas fa-asterisk" style="color:red"></i>
+                    </label>
+                    <div class="col">
+                        <input class="form-control form-control-sm" type="email" id="login" name="login" placeholder="Login" required>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label for="pwd" class="col-sm-2 col-form-label col-form-label-sm col">
+                        Password <i class="fas fa-asterisk" style="color:red"></i>
+                    </label>
+                    <div class="col">
+                        <input class="form-control form-control-sm" type="password" id="pwd" name="pwd" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label for="confirmPassword" class="col-sm-2 col-form-label col-form-label-sm col">
+                        Password <i class="fas fa-asterisk" style="color:red"></i>
+                    </label>
+                    <div class="col">
+                        <input class="form-control form-control-sm" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label for="gender" class="col-sm-2 col-form-label col-form-label-sm col">
+                        Gender</i>
+                    </label>
+                    <div class="col">
+                        <select class="form-control form-control-sm" name='gender'>
                             <option selected value='F'>Female</option>
                             <option value='M'>Male</option>
                         </select>
-
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Date Of Birtd (mm/dd/yyyy)</td>
-                    <td>
-                        <input type="date" name="dob" id="dateofbirth">
-                        <font class="error"> Date Of Birtd is required</font>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right" colspan="2">
-                        <input type="submit" name="operation" value="SignUp">
-                    </td>
-                </tr>
-            </table>
-    </form>
-    </center>
-    <HR>
-    <CENTER>
-        <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
-    </CENTER>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label for="dob" class="col-sm-2 col-form-label col-form-label-sm col">
+                        Date Of Birth
+                    </label>
+                    <div class="col">
+                        <input class="form-control form-control-sm" type="date" id="dob" name="dob" placeholder="Date of Birth">
+                    </div>
+                </div>
+                <div class="form-group form-row justify-content-end">
+                    <button type="submit" class="btn btn-outline-primary btn-sm">
+                        <i class="fa fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="d-flex justify-content-center">© 2017, Rays Technologies, SunilOS Infotech Pvt Ltd. </p>
 </body>
 
 </html>

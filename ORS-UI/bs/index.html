@@ -13,12 +13,10 @@
 
 </head>
 
-
 <body>
-
     <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="height:40px ;  color:white ; background-color:#007bff;">
         <img src="../img/logo.png" height="30">
-        <a class="navbar-brand h1" href="#">NCS</a>
+        <a class="navbar-brand h1 ml-2" href="#">ORS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,32 +26,20 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="Dashboard.html">DashBoard</a>
-                        <a class="dropdown-item" href="List.html">List</a>
-                        <a class="dropdown-item" href="ScrollList.html">Scroll List</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Dashboard.html">Dashbpard</a>
-                </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success btn-sm ml-2" type="submit">Search</button>
-            </form>
         </div>
     </nav>
     <div class="container_fluid m-4">
         <div class="container border col-sm-6">
             <h4 class="border-bottom pt-2">Form</h4>
-            <form action="welcome.html">
+
+            <div class="alert alert-danger">
+                <strong> 
+                     &nbsp;Invalid Id and Password
+                   </strong>
+            </div>
+
+            <form action="welcome.html" class="was-validated">
                 <div class="form-group form-row">
                     <label for="login" class="col-sm-2 col-form-label col-form-label-sm text-nowrap col">Email <i class="fas fa-asterisk" style="color:red"></i></label>
                     <div class="col">
@@ -61,9 +47,9 @@
                     </div>
                 </div>
                 <div class="form-group form-row">
-                    <label for="pwd" class="col-sm-2 col-form-label col-form-label-sm text-nowrap col">Password</label>
+                    <label for="pwd" class="col-sm-2 col-form-label col-form-label-sm text-nowrap col">Password <i class="fas fa-asterisk" style="color:red"></i></label>
                     <div class="col">
-                        <input type="password" class="form-control form-control-sm" id="pwd" placeholder="Password">
+                        <input type="password" class="form-control form-control-sm" id="pwd" placeholder="Password" required>
                     </div>
                 </div>
                 <div class="form-group form-row justify-content-end">

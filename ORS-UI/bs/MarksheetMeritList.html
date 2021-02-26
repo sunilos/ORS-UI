@@ -1,189 +1,206 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="app.css">
-    </link>
+    <title>ORS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <table width="100%" border="0">
-        <tr>
-            <td width="90%"><a href="welcome.html">Welcome</a> |
-                <a href="index.html">Logout</a>
-            </td>
-            <td rowspan="2">
-                <h1 align="Right">
-                    <img src="../img/logo.png" height="80">
-                </h1>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>
-                    Hi, Admin (Admin)</h3>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <div class="dropdown">
-                    <button class="dropbtn">Marksheet</button>
-                    <div class="dropdown-content">
-                        <a href="GetMarksheet.html">Get Marksheet</b></a>
-                        <a href="MarksheetMeritList.html">Marksheet MeritList</b>
-                        <a href="Marksheet.html">Add Marksheet</b></a>
-                        <a href="MarksheetList.html">Marksheet List</b></a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">User</button>
-                    <div class="dropdown-content">
-                        <a href="NotFound.html">Add User</b></a>
-                        <a href="NotFound.html">User List</b></a>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="height:40px ;  color:white ; background-color:#007bff;">
 
-                <div class="dropdown">
-                    <button class="dropbtn">College</button>
-                    <div class="dropdown-content">
-                        <a href="NotFound.html">Add College</b></a>
-                        <a href="NotFound.html">CollegeList</b></a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Student</button>
-                    <div class="dropdown-content">
-                        <a href="NotFound.html">Add Student</b></a>
-                        <a href="NotFound.html">Student List</b></a>
-                    </div>
-                </div>
+        <img src="../img/logo.png" height="30">
+        <a class="navbar-brand h1 ml-2" href="#">ORS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="dropdown">
-                    <button class="dropbtn">Role</button>
-                    <div class="dropdown-content">
-                        <a href="NotFound.html">Add Role</b></a>
-                        <a href="NotFound.html">Role List</b></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Marksheet
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="GetMarksheet.html">Get Marksheet</b></a>
+                        <a class="dropdown-item" href="MarksheetMeritList.html">Marksheet MeritList</b>
+                        <a class="dropdown-item"  href="Marksheet.html">Add Marksheet</b></a>
+                        <a class="dropdown-item" href="MarksheetList.html">Marksheet List</b></a>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">About us</button>
-                    <div class="dropdown-content">
-                        <a href="MyProfile.html">MyProfile</b></a>
-                        <a href="ChangePassword.html">Change Password</b></a>
-                        <a href="NotFound.html">Java Doc</b></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="NotFound.html">Add User</b></a>
+                        <a class="dropdown-item" href="NotFound.html">User List</b></a>
                     </div>
-                </div>
-            </td>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        College
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="NotFound.html">Add College</b></a>
+                        <a class="dropdown-item" href="NotFound.html">College List</b></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Student
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="NotFound.html">Student College</b></a>
+                        <a class="dropdown-item" href="NotFound.html">Student List</b></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Role
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="NotFound.html">Role College</b></a>
+                        <a class="dropdown-item" href="NotFound.html">Role List</b></a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="NotFound.html">Java Doc</span></a>
+                </li>
+            </ul>
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Welcome Ram kumar
+                        </a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="MyProfile.html">MyProfile</b></a>
+                            <a class="dropdown-item" href="ChangePassword.html">Change Password</b></a>
+                            <a class="dropdown-item" href="index.html">Logout</b></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container_fluid m-4">
+        <h4 class="border-bottom pt-2">Marksheet Merit List</h4>
+        <div class="table-responsive ">
+            <table class="table table-sm table-striped my-1 ">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Physics</th>
+                        <th>Chemistry</th>
+                        <th>Maths</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>B111</td>
+                        <td>Vipul Baser</td>
+                        <td>99</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>A111</td>
+                        <td>Ashutosh Upadhyay</td>
+                        <td>99</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>A1</td>
+                        <td>ABBY</td>
+                        <td>99</td>
+                        <td>99</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>Rajesh Verma</td>
+                        <td>99</td>
+                        <td>77</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>18</td>
+                        <td>mohan lal</td>
+                        <td>88</td>
+                        <td>89</td>
+                        <td>88</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>Ashish Nehra</td>
+                        <td>88</td>
+                        <td>88</td>
+                        <td>88</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>mohan lal</td>
+                        <td>77</td>
+                        <td>77</td>
+                        <td>77</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>Manish Sharma</td>
+                        <td>66</td>
+                        <td>66</td>
+                        <td>66</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>21</td>
+                        <td>Manish Sharma</td>
+                        <td>58</td>
+                        <td>58</td>
+                        <td>59</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>30</td>
+                        <td>Rajendra Manli</td>
+                        <td>55</td>
+                        <td>55</td>
+                        <td>55</td>
+                    </tr>
 
-        </tr>
-    </table>
-    <hr>
-    <center>
-        <h1>Marksheet Merit List</h1>
-        <form action="">
-            <br>
-            <table border="1" cellspacing="0" width="90%">
-                <tr>
-                    <th>ID</th>
-                    <th>Roll No</th>
-                    <th>Name</th>
-                    <th>Physics</th>
-                    <th>Chemistry</th>
-                    <th>Maths</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>B111</td>
-                    <td>Vipul Baser</td>
-                    <td>99</td>
-                    <td>100</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>A111</td>
-                    <td>Ashutosh Upadhyay</td>
-                    <td>99</td>
-                    <td>100</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>A1</td>
-                    <td>ABBY</td>
-                    <td>99</td>
-                    <td>99</td>
-                    <td>99</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>Rajesh Verma</td>
-                    <td>99</td>
-                    <td>77</td>
-                    <td>99</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>18</td>
-                    <td>mohan lal</td>
-                    <td>88</td>
-                    <td>89</td>
-                    <td>88</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>Ashish Nehra</td>
-                    <td>88</td>
-                    <td>88</td>
-                    <td>88</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>10</td>
-                    <td>mohan lal</td>
-                    <td>77</td>
-                    <td>77</td>
-                    <td>77</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>Manish Sharma</td>
-                    <td>66</td>
-                    <td>66</td>
-                    <td>66</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>21</td>
-                    <td>Manish Sharma</td>
-                    <td>58</td>
-                    <td>58</td>
-                    <td>59</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>30</td>
-                    <td>Rajendra Manli</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                </tr>
+                </tbody>
             </table>
-            <table>
-                <tr>
-                    <td align="right"><input type="submit" name="operation" value="Back"></td>
-                </tr>
-            </table>
-            <input type="hidden" name="pageNo" value="1"> <input type="hidden" name="pageSize" value="10">
-        </form>
-    </center>
-    <HR>
-    <CENTER>
-        <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
-    </CENTER>
+            <div class="text-center">
+                <button type="submit" class="btn btn-outline-primary btn-sm">
+                    <i class="fa fa-arrow-circle-left"></i> Back
+                </button>
+            </div>
+            <p class="d-flex justify-content-center">© 2017, Rays Technologies, SunilOS Infotech Pvt Ltd. </p>
+
+        </div>
+    </div>
 </body>
 
 </html>

@@ -66,3 +66,25 @@ function httPost(url, jsonData, callback) {
     xhttp.open("POST", url, true);
     xhttp.send();
 }
+/** 
+ * Sort object array by a property.  
+ * prefix - will sort array in descending order
+ */
+function orderBy(property) {
+    var sortOrder = 1; //Ascending
+    if (property[0] === "-") {
+        sortOrder = -1; //Descending
+        property = property.substr(1);
+    }
+    return function(a, b) {
+        var result = 0;
+        if (a[property] < b[property]) {
+            result = -1; //first is small
+        } else if (a[property] > b[property]) {
+            result = 1; //second is small
+        } else {
+            result = 0; //both are equal
+        }
+        return result * sortOrder;
+    }
+}
